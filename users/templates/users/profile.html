@@ -1,0 +1,14 @@
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{user.profile.image.url}}" width="300px", height='300px'>
+            <div class="media-body">
+                <div class="container">
+                    <h4 class="account-heading">{{user.profile.first_name}} {{user.profile.last_name}}</h4>
+                    <p class="account-heading">{{user.profile.bio}}</p>
+                    <small class="text-muted">{{user.profile.date_joined|date:"s M Y"}}, {{user.profile.current_location}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
