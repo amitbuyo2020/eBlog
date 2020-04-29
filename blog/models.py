@@ -25,6 +25,9 @@ class Article(models.Model):
     class Meta:
         ordering = ['-date_posted']
 
+    def get_absolute_url(self):
+        return reverse('article_detail', kwargs={'pk': self.pk})
+
     def __str__(self):
         return self.title
 

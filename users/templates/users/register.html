@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block styles %} 
+{% block styles %}
 
 <link rel='stylesheet' href='{% static "css/login.css"%}'>
 <link rel='stylesheet' href='{% static "css/register.css"%}'>
@@ -27,6 +27,16 @@
                 <small class="">Already have an account?
                     <a class="link" href="{% url 'login'%}">Sign In</a>
                 </small>
+            </div>
+            <label for="" class="label">Or Sign Up With</label><br>
+            <div class="field">
+                <div class="control">
+                    <a href="{% url 'social:begin' 'facebook' %}" class="button">
+                        <span class="icon">
+                            <i class="fas fa-facebook"></i>Facebook
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

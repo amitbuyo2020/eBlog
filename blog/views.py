@@ -20,24 +20,17 @@ class ArticleListView(ListView):
 class UserArticleListView(ListView):
     model = Article
     template_name = 'blog/user_posts.html' #<app>/<model>_<viewtype>.html
-    context_object_name = 'posts'
+    context_object_name = 'articles'
     paginate_by = 5
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Article.objects.filter(author=user).order_by('-date_posted')
 
-def shared_images(request):
-    context = {
-        'images': Article.objects.all().order_by('-date_posted'),
-        'title': 'Shared Images'
-    }
-    return render(request, 'blog/user_posts_images.html', context)
-
 class ArticleDetailView(DetailView):
     model = Article
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
     fields = ['title', 'content','video', 'image', 'add_link']
 
@@ -55,7 +48,7 @@ class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         article = self.get_object()
-        if self.request.user == post.author:
+        if self.request.user == article.author:
             return True
         return False
 
