@@ -1,0 +1,136 @@
+{% extends 'course/secondary.html' %}
+{% block body %}
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'eNepal' %}">eNepal</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Articles
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item active" href="portfolio-1-col.html">Articles</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">New Article</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose Topic
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="#">Science</a>
+              <a class="dropdown-item" href="#">Mathematics</a>
+              <a class="dropdown-item" href="#">Computer Science</a>
+            </div>
+          </li>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Accounts
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item active" href="full-width.html">Profile</a>
+              <a class="dropdown-item " href="sidebar.html">Update Profile</a>
+              <a class="dropdown-item" href="404.html">Log Out</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <br><br>
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Secondary Section</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <a href="{% url 'lower-secondary' %}">Lower Secondary</a>
+      </li>
+    </ol>
+
+      <!-- Content Column -->
+      <div class="col-lg-9 mb-4">
+        <h2>Choose Topic</h2>
+        <p>
+          Looks like you are in the Lower Seocndary section. What do you want to learn today?
+          Choose any of the topics below and get started!
+        </p>
+      </div>
+    </div>
+    <!-- /.row -->
+  <div class="container">
+    <!-- Resources Section -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Science</h4>
+          <div class="card-body">
+            <i class="fas fa-flask" style="font-size: 800%; color: #FF69B4;"></i>
+            <p class="card-text">We have online resources for science related topics to read.
+             We have covered the topics that are required for the students of primary and secondary level.
+             Detail explanation of every topics is covered in this resource.
+             You can read it online or you can download as pdf and save it in your device</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Mathematics</h4>
+          <div class="card-body">
+            <i class="fas fa-greater-than-equal" style="font-size: 800%; color: #c82033 "></i><br>
+            <p class="card-text">
+              Detailed and step wise explanation of mathematical problems have been covered in this section.
+              Exercise Problems and solved examples are covered for mathematics in this section.
+              You can solve problems online or download the pdf file and solve as per your requirements.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Computer Science</h4>
+          <div class="card-body">
+            <i class="fas fa-laptop-code" style="font-size: 800%; color: #7ec5df"></i>
+            <p class="card-text">
+              This section covers basic ideas about computer science.
+              Detailed explanation of every topic is covered in this section.
+              Topics like Q-basic , Basic Html, and many more is covered to aid the necessity of computer science students.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock body %}

@@ -20,11 +20,17 @@ def about(request):
     }
     return render(request, 'course/about.html', context)
 
-def grade1(request):
+def secondary(request):
     context = {
         'title': "Secondary",
     }
     return render(request, 'course/secondary.html', context)
+
+def primary(request):
+    return render(request, 'course/primary.html', {'title': 'Primary'})
+
+def lowerSecondary(request):
+    return render(request, 'course/lower_secondary.html', {'title': "Lower Secondary"})
 
 def contact(request):
     return render(request, 'course/contact.html', {'title': "Contact"})

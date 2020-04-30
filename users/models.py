@@ -25,8 +25,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, blank=True,null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
-    bio = models.TextField(max_length=250)
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    bio = models.TextField(max_length=250, blank=True)
+    image = models.ImageField(default='default.jpg', upload_to='profile_pics', verbose_name="Profile Picture")
     current_location = models.CharField(max_length=100)
     date_joined = models.DateTimeField(default=timezone.now)
 

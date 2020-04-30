@@ -21,7 +21,7 @@ def register(request):
 @login_required(login_url='login')
 def profile(request):
     context = {
-    'title': 'Profile',
+    'title': "Profile",
     }
     return render(request, 'users/profile.html', context)
 
