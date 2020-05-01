@@ -19,7 +19,7 @@
             <form method="POST" class='register-form'>
                 {% csrf_token %}
                 <p class="title">Join Today</p>
-                {{form|crispy}}
+                {{form.as_p}}
                 <button class="button-login" type="submit">Sign Up</button>
             </form>
 

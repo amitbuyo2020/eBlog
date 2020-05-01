@@ -5,11 +5,11 @@
             <form method="POST" enctype="multipart/formdata">
                 {% csrf_token %}
                 <fieldset class="form-group">
-                    <legend class="border-bottom mb-4">Update Profile</legend>
-                    {{p_form|crispy}}
+                    <legend class="border-bottom mb-4">Update Your Profile</legend>
+                    {{p_form}}
                 </fieldset>
                 <div class="form-group">
-                    <button class="btn btn-outline-info" type="submit">Update Profile</button>
+                    <button class="btn btn-outline-info" type="submit">Update</button>
                 </div>
             </form>
         </div>

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>eNepal-Home</title>
+  <title>{{title}}</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -33,7 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><b>eNepal</b></a>
+      <a class="navbar-brand" href="{% url 'eNepal' %}"><b>eNepal</b></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,7 +45,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
               <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-              <a class="dropdown-item" href="{% url 'update-profile'  %}">Update Profile</a><hr/>
+              <a class="dropdown-item" href="{% url 'update-profile' %}">Update Profile</a><hr/>
               <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </div>
           </li>
@@ -63,15 +63,15 @@
               Choose Grade
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="#">Primary</a>
-              <a class="dropdown-item" href="#">Lower Secondary</a>
+              <a class="dropdown-item" href="{% url 'primary' %}">Primary</a>
+              <a class="dropdown-item" href="{% url 'lower-secondary' %}">Lower Secondary</a>
               <a class="dropdown-item" href="{% url 'secondary' %}">Secondary</a>
               <a class="dropdown-item" href="#">Higher Secondary</a><hr/>
               <a class="dropdown-item" href="#">Other</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Services</a>
