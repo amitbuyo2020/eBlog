@@ -2,42 +2,42 @@
 
 {% load static %}
 
-{% block styles %}
+{% block add-styles %}
 
-<link rel='stylesheet' href='{% static "css/login.css"%}'>
-<link rel='stylesheet' href='{% static "css/register.css"%}'>
-
-
+<link rel='stylesheet' href='{% static "css/user-base.css" %}'/>
+<link rel="stylesheet" href="{% static 'css/login-form.css'%} ">
 {% endblock %}
 
 
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="container">
+    <div class="container-fluid mx-auto h-100 register-form border-0 ">
+        <div class="container-fluid main-section col-xl-4 col-lg-5 col-md-8 col-sm-12 mx-auto p-5 bg-gradient form-style">
         <div class="content-section">
 
-            <form method="POST" class='register-form'>
+            <form method="POST" class=''>
                 {% csrf_token %}
-                <p class="title">Join Today</p>
+                <h1 class="title text-white">Join Today</h1>
                 {{form.as_p}}
-                <button class="button-login" type="submit">Sign Up</button>
+                <button class="button-login border-0" type="submit">Sign Up</button>
             </form>
 
             <div class="suggestion-text">
-                <small class="">Already have an account?
-                    <a class="link" href="{% url 'login'%}">Sign In</a>
+                <small class="text-info">Already have an account?
+                    <a class="link text-warning" href="{% url 'login'%}">Sign In  &rarr;</a>
                 </small>
             </div>
             <label for="" class="label">Or Sign Up With</label><br>
             <div class="field">
                 <div class="control">
-                    <a href="{% url 'social:begin' 'facebook' %}" class="button">
+                    <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block social-btn">
                         <span class="icon">
-                            <i class="fas fa-facebook"></i>Facebook
+                            <i class="fab fa-facebook"></i>Facebook
                         </span>
                     </a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 {% endblock %}
