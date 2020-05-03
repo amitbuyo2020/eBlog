@@ -1,0 +1,25 @@
+body {
+  padding-top: 56px;
+  background: linear-gradient(-45deg, #4ca, #1645d3);
+  background-size: 400%;
+  background-position: center;
+  position: center;
+  animation: animate-bg 15s infinite alternate;
+  min-height: 100vh;
+}
+
+.bg-gradient {
+  background: linear-gradient(to right, #5c258d, #4389a2);
+}
+
+@keyframes animate-bg {
+  0% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
