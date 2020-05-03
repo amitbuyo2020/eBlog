@@ -36,7 +36,7 @@ ul {
   color: #777;
 }
 small ul {
-  color: #777;
+  color: rgb(43, 42, 42);
 }
 small ul li:before {
   content: "*";
