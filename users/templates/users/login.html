@@ -6,36 +6,35 @@ Sign Up
 {% endblock %}
 
 {% block add-styles %}
-    <link rel='stylesheet' href='{% static "css/user-base.css" %}'/>
-    <link rel="stylesheet" href="{% static 'css/login-form.css'%} ">
+    <link rel="stylesheet" href="{% static 'css/user-forms.css'%} ">
 {% endblock %}
 
 
 {% block content %}
-<div class='container-fluid mx-auto h-100 login-form border-0 '>
-    <div class="container-fluid main-section col-xl-4 col-lg-5 col-md-8 col-sm-12 mx-auto p-5 bg-gradient form-style">
-        <div class="content-section">
-            <form method="POST">
-                {% csrf_token %}
-                    <h1 class="text-center p-1 pb-3 mb-0 title-text">Sign In</h1>
-                     
-                       {{form.as_p}}
-                <div class="form-group">
-                    <button class="button-login btn" type="submit">Login</button>
+    <div class='container-fluid mx-auto h-100 login-form border-0 '>
+        <div class="container-fluid main-section col-xl-4 col-lg-5 col-md-8 col-sm-12 mx-auto p-5 bg-gradient form-style">
+            <div class="content-section">
+                <form method="POST">
+                    {% csrf_token %}
+                        <h1 class="text-center p-1 pb-3 mb-0 title-text">Sign In</h1>
+                        
+                        {{form.as_p}}
+                    <div class="form-group">
+                        <button class="button-login btn" type="submit">Login</button>
+                    </div>
+                </form>
+                <div class="text-additive text-muted text-right" >
+                    <small class='text-white'>Need an account?
+                        <a class="link text-warning" href="{% url 'user-register' %}">Sign Up &rarr;</a>
+                    </small>
                 </div>
-            </form>
-            <div class="text-additive text-muted text-right" >
-                <small class='text-white'>Need an account?
-                    <a class="link text-warning" href="{% url 'user-register' %}">Sign Up &rarr;</a>
-                </small>
-            </div>
-            <div class="text-additive text-muted text-right" >
-                <small class='text-white'>Forgot Password?
-                    <a class="link  text-warning" href="{% url 'reset_password' %}">Reset Password &rarr;</a>
-                </small>
-            </div>
+                <div class="text-additive text-muted text-right" >
+                    <small class='text-white'>Forgot Password?
+                        <a class="link  text-warning" href="{% url 'reset_password' %}">Reset Password &rarr;</a>
+                    </small>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
 {% endblock %} 
