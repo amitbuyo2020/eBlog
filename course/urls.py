@@ -9,4 +9,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('primary/', views.primary, name='primary'),
     path('lsecondary/', views.lowerSecondary, name='lower-secondary'),
+    path('secondary/science/', views.secScience, name='sec-science'),
+    path('secondary/math/', views.secMath, name='sec-math'),
+    path('secondary/cs/', views.secComputer, name='sec-computer'),
+    path('primary/science/', views.priScience, name='pri-science'),
+
 ]
