@@ -3,6 +3,9 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
  */
+html {
+  min-height: 100vh;
+}
 body {
   padding-top: 56px;
 }
